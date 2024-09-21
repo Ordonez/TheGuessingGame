@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class GuessingGame {
     public static void main(String[] args) {
         System.out.println("Welcome to the Guessing Game!");
-        System.out.println("I will select a number between 1 and 200 and you will have to guess it.");
+        System.out.println("I will select a number between 1 and 200 and you will try to guess it.");
         System.out.println("You will get 5 tries to guess the number correctly. Good Luck!");
 
         Scanner playerObj = new Scanner(System.in);
@@ -16,6 +16,7 @@ public class GuessingGame {
 
         } while(playAgain.equals("Y"));
         System.out.println("Thanks for playing!");
+        //if the user selects "N" the game will end as intended
     }
 
     static void letsPlay() {
@@ -23,7 +24,7 @@ public class GuessingGame {
         int userGuess;
         int guessCount;
 
-        generatedNumber = (int)(200 * Math.random()) + 1;
+        generatedNumber = (int)(200 * Math.random()) + 1; // logic for computer generated number
         guessCount = 0;
         System.out.println();
         System.out.println("What is your first guess? ");
